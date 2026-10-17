@@ -27,6 +27,8 @@ export const env = {
   databaseUrl: process.env.DATABASE_URL ?? "",
   redisHost: process.env.REDIS_HOST ?? "localhost",
   redisPort: Number(process.env.REDIS_PORT ?? 6379),
+  redisPassword: process.env.REDIS_PASSWORD,
+  redisTls: process.env.REDIS_TLS === "true",
 
   // Minimum spacing between email sends, in milliseconds.
   emailSendDelayMs: readPositiveInteger(
