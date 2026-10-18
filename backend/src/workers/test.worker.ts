@@ -1,10 +1,9 @@
 
-import { Worker } from "bullmq";
 import { redis } from "../config/redis";
-
+import { Job, Worker } from "bullmq";
 export const testWorker = new Worker(
   "reachinbox-test",
-  async (job) => {
+  async (job: Job) => {
     console.log("Processing job:", job.name);
     console.log("Job data:", job.data);
 
